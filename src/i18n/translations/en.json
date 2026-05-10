@@ -1,0 +1,18 @@
+{
+  "tabs": {
+    "dashboard": "Dashboard",
+    "cases": "Cases",
+    "profile": "Profile",
+    "library": "Library"
+  },
+  "profile": {
+    "preferences": "Preferences",
+    "language": "Language",
+    "appearance": "Appearance",
+    "english": "English",
+    "gujarati": "Gujarati",
+    "hindi": "Hindi",
+    "marathi": "Marathi",
+    "selectLanguage": "Select Language"
+  }
+}

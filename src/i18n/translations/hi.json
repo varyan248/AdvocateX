@@ -1,0 +1,18 @@
+{
+  "tabs": {
+    "dashboard": "डैशबोर्ड",
+    "cases": "मामले",
+    "profile": "प्रोफ़ाइल",
+    "library": "पुस्तकालय"
+  },
+  "profile": {
+    "preferences": "प्राथमिकताएं",
+    "language": "भाषा",
+    "appearance": "रूप-रंग",
+    "english": "अंग्रेज़ी",
+    "gujarati": "गुजराती",
+    "hindi": "हिंदी",
+    "marathi": "मराठी",
+    "selectLanguage": "भाषा चुनें"
+  }
+}
