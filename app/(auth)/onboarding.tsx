@@ -86,7 +86,7 @@ export default function OnboardingScreen() {
 
   const handleGetStarted = () => {
     setOnboarded(true);
-    router.replace('/(auth)/phone');
+    router.replace('/(auth)/login');
   };
 
   const renderSlide = ({ item, index }: { item: typeof SLIDES[0]; index: number }) => (

@@ -27,8 +27,29 @@ const queryClient = new QueryClient({
   },
 });
 
+import { useAuthStore } from '../src/stores/authStore';
+import { useRouter, useSegments } from 'expo-router';
+
 function RootLayoutContent() {
   const { colors, isDark } = useTheme();
+  const { isAuthenticated, isOnboarded } = useAuthStore();
+  const segments = useSegments();
+  const router = useRouter();
+
+  useEffect(() => {
+    const inAuthGroup = segments[0] === '(auth)';
+    const inTabsGroup = segments[0] === '(tabs)';
+
+    // Wait for splash screen to finish routing naturally first,
+    // but handle subsequent auth state changes here.
+    if (!isAuthenticated && inTabsGroup) {
+      // Redirect to login if user logs out or token expires
+      router.replace('/(auth)/login');
+    } else if (isAuthenticated && inAuthGroup) {
+      // Redirect to tabs if user logs in and is somehow stuck in auth screens
+      router.replace('/(tabs)');
+    }
+  }, [isAuthenticated, segments]);
 
   return (
     <>

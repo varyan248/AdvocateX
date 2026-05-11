@@ -62,7 +62,7 @@ export default function SplashScreen() {
     if (isAuthenticated) {
       router.replace('/(tabs)');
     } else if (isOnboarded) {
-      router.replace('/(auth)/phone');
+      router.replace('/(auth)/login');
     } else {
       router.replace('/(auth)/onboarding');
     }

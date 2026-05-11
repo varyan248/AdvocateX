@@ -64,6 +64,7 @@ export default function ProfileScreen() {
         { id: 'biometric', icon: 'finger-print', label: 'Biometric Lock', toggle: true },
         { id: 'autolock', icon: 'lock-closed', label: 'Auto-Lock', value: '5 min' },
         { id: 'export', icon: 'download', label: 'Export My Data' },
+        { id: 'logout', icon: 'log-out', label: 'Log Out', danger: true },
         { id: 'delete', icon: 'trash', label: 'Delete Account', danger: true },
       ],
     },
@@ -200,6 +201,10 @@ export default function ProfileScreen() {
                       const currentIndex = LANGUAGES.indexOf(settings.defaultLanguage);
                       const nextLang = LANGUAGES[(currentIndex + 1) % LANGUAGES.length];
                       settings.setDefaultLanguage(nextLang);
+                    }
+                    if (item.id === 'logout') {
+                      useAuthStore.getState().signOut();
+                      router.replace('/(auth)/login');
                     }
                   }}
                 >

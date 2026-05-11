@@ -14,8 +14,8 @@ export default function AuthLayout() {
     >
       <Stack.Screen name="splash" />
       <Stack.Screen name="onboarding" />
-      <Stack.Screen name="phone" />
-      <Stack.Screen name="otp" />
+      <Stack.Screen name="login" />
+      <Stack.Screen name="register" />
     </Stack>
   );
 }
